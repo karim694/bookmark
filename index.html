@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="pngtree-bookmark-icon-vector-illustration-in-filled-style-for-any-purpose-png-image_975418.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <header class="py-5">
+      <div
+        class="container d-flex flex-column justify-content-center align-items-center"
+      >
+        <h1 class="py-2">Bookmarker</h1>
+        <div class="my-border w-100 mt-5 py-4">
+          <div class="px-3">
+            <h2 class="text-center mb-4">
+              <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+              <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="mb-3">
+              <label for="siteName" class="form-label"
+                ><i class="fa-solid fa-book-bookmark me-2"></i> Site Name
+              </label>
+              <input
+                oninput="validationsiteName()"
+                type="text"
+                class="form-control"
+                id="siteName"
+                placeholder="Bookmark Name"
+              />
+              <p id="msgName" class="alert alert-danger mt-2 d-none">
+                Site Name  is not valid, Please follow the rule : Site name must contain at least 3 characters
+              </p>
+            </div>
+            <div class="mb-3">
+              <label for="siteUrl" class="form-label"
+                ><i class="fa-solid fa-link me-2"></i> Site URL</label
+              >
+              <input
+                oninput="validationsiteUrl()"
+                type="url"
+                class="form-control"
+                id="siteUrl"
+                placeholder="Website URL"
+              />
+              <p id="msgUrl" class="alert alert-danger mt-2 d-none">
+                Site URL  is not valid, Please follow the rule : Site URL must be a valid one
+              </p>
+            </div>
+            <div class="text-center mt-4">
+              <button onclick="addSite()" type="button" class="btn my-btn px-5">
+                Sumbit
+              </button>
+            </div>
+          </div>
+        </div>
+        <table class="table mt-4 text-center bg-light">
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Website Name</th>
+              <th>Visit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="tableContent"></tbody>
+        </table>
+      </div>
+    </header>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
